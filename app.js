@@ -52,10 +52,10 @@ app.get('/admin',function(req,res){
     sess = req.session;
     if(sess.email) {
         res.write(' <h1>Hello '+sess.email+'</h1>');
-        res.end('<a href="+">Logout</a>');
+        res.end('<a href="/logout">Logout</a>');
     } else {
         res.write(' <h1>Please login first.</h1>');
-        res.end('<a href="+">Login</a>');
+        res.end('<a href="/">Login</a>');
     }
 });
 
